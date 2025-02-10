@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Notes App</title>
+    
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script defer type="module" src="src/main.js"></script>
+    
+</head>
+<body>
+    <header>
+        <note-nav img="src/assets/logoNotes.png" imgAlt="Logo Notes App"></note-nav>
+    </header>
+
+    <main>
+        <section id="inputNewNote">
+            <h2>Catatan Baru</h2>
+            <form id="noteForm" class="note-form" autocomplete="off">
+                <div class="input-note">
+                    <label for="noteFormTitle">Judul</label>
+                    <input id="noteFormTitle" 
+                    name="formTitle"
+                    type="text" required
+                    minlength="4"
+                    pattern="^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$"
+                    aria-describedby="titleValidation">
+                    <p id="titleValidation" class="title-validation" aria-live="polite"></p>
+                </div>
+                <div class="input-note">
+                    <label for="noteFormBody">Isi</label>
+                    <textarea name="formBody" id="noteFormBody" 
+                    minlength="10" aria-describedby="bodyValidation" required></textarea>
+                    <p id="bodyValidation" class="body-validation" aria-live="polite"></p>
+                </div>
+                <div class="input-submit">
+                    <button id="bookFormSubmit" type="submit">
+                    Tambahkan Catatan<i class="ri-add-line"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="listNotes">
+            <note-data></note-data>
+        </section>
+        
+    </main>
+
+    <footer>
+        <note-foot></note-foot>
+    </footer>
+  </body>
+</html>
