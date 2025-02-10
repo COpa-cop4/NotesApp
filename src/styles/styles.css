@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FCE7C8;
+    font-family: "Dekko", cursive;
+}
+
+#inputNewNote {
+    margin: 20px;
+    padding: 28px;
+    display: grid;
+    justify-items: center;
+}
+
+#inputNewNote > h2 {
+    font-size: 1.4rem;
+    padding: 0 0 20px 0;
+}
+
+.note-form {
+    padding: 30px 80px;
+    border: 2px solid #000;
+    box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px #000;
+    width: 50vw;
+}
+
+.note-form .input-note {
+    display: grid;
+}
+
+.note-form .input-note > label {
+    font-size: 1.05rem;
+    padding: 10px 0;
+}
+
+.note-form .input-note > input, .note-form .input-note > textarea {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-family: "dekko", cursive;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-bottom: 4px solid #000;
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: #000;
+}
+
+.note-form .input-note > input:focus, .note-form .input-note > textarea:focus {
+    border-bottom: 5px solid #ffa580;
+}
+
+.note-form .input-submit button {
+    display: flex;
+    justify-self: center;
+    padding-top: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    font-family: "Dekko", cursive;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+.note-form .input-submit button:hover {
+    color: #ff4800;
+}
+
+.note-form .input-submit button i {
+    font-size: 20px;
+}
+
+.title-validation, .body-validation {
+    margin-block-start: 0.2rem;
+    color: red;
+}
+
+/* RESPONSIVE WEB */
+
+@media only screen and (max-width: 778px) {
+    #inputNewNote > h2 {
+        font-size: 1.2rem;
+    }
+
+    .note-form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .note-form {
+        padding: 20px 50px;
+    }
+
+    .note-form .input-submit button {
+        padding: 20px 0 5px 0;
+    }
+
+    .title-validation, .body-validation {
+        font-size: 14px;
+    }
+} 
